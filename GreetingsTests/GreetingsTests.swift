@@ -3,7 +3,9 @@ import XCTest
 
 class GreetingsTests: XCTestCase {
 
-    func testExample() throws {
-        XCTAssertTrue(true)
-    }
+    // This is a **Test List**, the list of tests we want to write to guide the behavior
+
+    func testGreetingWithNoUserSaysGdayMate() {}
+
+    func testGreetingsWithUserNameSaysGdayUserName() {}
 }
