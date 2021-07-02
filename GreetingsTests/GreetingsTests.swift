@@ -20,5 +20,10 @@ class GreetingsTests: XCTestCase {
 // I like to start working on code in the same file as the test, so I don't have to move between
 // files or editor panes.
 func greetings(userName: String?) -> String {
-    ""
+    // What's the simplest implementation we can write to make the test pass?
+    // Return the value the test expects.
+    //
+    // This pattern is called "Fake It" and is particularly useful when you don't know how to get
+    // started writing the implementation. It's a cheap way to get to the green state.
+    "G'day, mate!"
 }
