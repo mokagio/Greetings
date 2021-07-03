@@ -20,7 +20,7 @@ struct User: Codable, Equatable {
         try repository.save(self)
     }
 
-    static func get() -> User? {
+    static func get(from repository: UserRepository = UserDefaults.standard) -> User? {
         return UserDefaults.standard.data(forKey: User.key)
             .flatMap { try? JSONDecoder().decode(User.self, from: $0) }
     }

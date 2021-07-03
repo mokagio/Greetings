@@ -15,7 +15,10 @@ class UserTests: XCTestCase {
         XCTAssertEqual(userRepositoryDouble.storedUser, user)
     }
 
-    func testGetUserWhenThereIsNoUserReturnsNone() { }
+    // This test may or may not pass already, depending on the state of your `UserDefaults`.
+    func testGetUserWhenThereIsNoUserReturnsNone() {
+        XCTAssertNil(User.get(from: UserRepositoryDouble()))
+    }
 
     func testGetUserWhenThereIsUserReturnsIt() { }
 }
