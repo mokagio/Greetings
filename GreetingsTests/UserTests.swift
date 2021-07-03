@@ -6,9 +6,27 @@ import XCTest
 // to make sure we have tests around it.
 class UserTests: XCTestCase {
 
-    func testSaveUserStoresSelf() { }
+    func testSaveUserStoresSelf() throws {
+        let user = User(name: "a name")
+        let userRepositoryDouble = UserRepositoryDouble()
+
+        try user.save(in: userRepositoryDouble)
+
+        XCTAssertEqual(userRepositoryDouble.storedUser, user)
+    }
 
     func testGetUserWhenThereIsNoUserReturnsNone() { }
 
     func testGetUserWhenThereIsUserReturnsIt() { }
+}
+
+class UserRepositoryDouble: UserRepository {
+
+    private(set) var storedUser: User?
+
+    func get() -> User? { storedUser }
+
+    func save(_ user: User) throws { storedUser = user }
+
+    func delete() { storedUser = .none }
 }

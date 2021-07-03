@@ -1,6 +1,6 @@
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Equatable {
 
     let name: String
 
@@ -16,7 +16,7 @@ struct User: Codable {
     //
     // We'll make all these changes using the tests as a guide, of course.
 
-    func save() throws {
+    func save(in repository: UserRepository = UserDefaults.standard) throws {
         UserDefaults.standard.set(try JSONEncoder().encode(self), forKey: User.key)
     }
 
