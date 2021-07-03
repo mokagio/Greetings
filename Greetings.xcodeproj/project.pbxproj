@@ -16,6 +16,8 @@
 		3FD379FC2690105000067A7E /* Greetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD379FB2690105000067A7E /* Greetings.swift */; };
 		3FD379FE269014D200067A7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD379FD269014D200067A7E /* User.swift */; };
 		3FD37A002690154400067A7E /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD379FF2690154400067A7E /* UserTests.swift */; };
+		3FD37A02269016A700067A7E /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD37A01269016A700067A7E /* UserRepository.swift */; };
+		3FD37A04269017FA00067A7E /* UserDefaults+UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD37A03269017FA00067A7E /* UserDefaults+UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		3FD379FB2690105000067A7E /* Greetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greetings.swift; sourceTree = "<group>"; };
 		3FD379FD269014D200067A7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3FD379FF2690154400067A7E /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		3FD37A01269016A700067A7E /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		3FD37A03269017FA00067A7E /* UserDefaults+UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+UserRepository.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				3FD379FB2690105000067A7E /* Greetings.swift */,
 				3F5C197A268E5A860013B671 /* GreetingsApp.swift */,
 				3FD379FD269014D200067A7E /* User.swift */,
+				3FD37A01269016A700067A7E /* UserRepository.swift */,
+				3FD37A03269017FA00067A7E /* UserDefaults+UserRepository.swift */,
 				3F5C1980268E5A880013B671 /* Preview Content */,
 			);
 			path = Greetings;
@@ -266,7 +272,9 @@
 				3FD379FE269014D200067A7E /* User.swift in Sources */,
 				3FD379FC2690105000067A7E /* Greetings.swift in Sources */,
 				3F5C197D268E5A860013B671 /* ContentView.swift in Sources */,
+				3FD37A02269016A700067A7E /* UserRepository.swift in Sources */,
 				3F5C197B268E5A860013B671 /* GreetingsApp.swift in Sources */,
+				3FD37A04269017FA00067A7E /* UserDefaults+UserRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
