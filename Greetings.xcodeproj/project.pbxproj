@@ -14,6 +14,7 @@
 		3F5C198C268E5A880013B671 /* GreetingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C198B268E5A880013B671 /* GreetingsTests.swift */; };
 		3F5C1996268E5A880013B671 /* GreetingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5C1995268E5A880013B671 /* GreetingsUITests.swift */; };
 		3FD379FC2690105000067A7E /* Greetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD379FB2690105000067A7E /* Greetings.swift */; };
+		3FD379FE269014D200067A7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD379FD269014D200067A7E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3F5C1991268E5A880013B671 /* GreetingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreetingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5C1995268E5A880013B671 /* GreetingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsUITests.swift; sourceTree = "<group>"; };
 		3FD379FB2690105000067A7E /* Greetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greetings.swift; sourceTree = "<group>"; };
+		3FD379FD269014D200067A7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				3F5C197C268E5A860013B671 /* ContentView.swift */,
 				3FD379FB2690105000067A7E /* Greetings.swift */,
 				3F5C197A268E5A860013B671 /* GreetingsApp.swift */,
+				3FD379FD269014D200067A7E /* User.swift */,
 				3F5C1980268E5A880013B671 /* Preview Content */,
 			);
 			path = Greetings;
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD379FE269014D200067A7E /* User.swift in Sources */,
 				3FD379FC2690105000067A7E /* Greetings.swift in Sources */,
 				3F5C197D268E5A860013B671 /* ContentView.swift in Sources */,
 				3F5C197B268E5A860013B671 /* GreetingsApp.swift in Sources */,
