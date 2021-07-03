@@ -20,11 +20,3 @@ class GreetingsTests: XCTestCase {
         XCTAssertEqual(greetings(userName: "Ada"), "G'day, Ada!")
     }
 }
-
-// I like to start working on code in the same file as the test, so I don't have to move between
-// files or editor panes.
-func greetings(userName: String?) -> String {
-    // Once in the green state, we can eliminate duplication and refactor the first implementation
-    // we wrote. —Red, Green, Refactor
-    return "G'day, \(userName.map { $0 } ?? "mate")!"
-}

@@ -11,21 +11,21 @@ struct ContentView: View {
     private(set) var userName: String? = .none
 
     var body: some View {
-        if let userName = userName {
-            Text("Hello, \(userName)!")
-                .padding()
-        } else {
-            Text("Hello, world!")
-                .padding()
-        }
+        // Because all the presentation content logic lives outside
+        // of the SwiftUI domain, we can modify the view content
+        // using the faster testing workflow without having to
+        // rely on Previews and our eyes to tell us if the behavior
+        // has been updated correctly.
+        Text(greetings(userName: userName))
+            .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        // Using two different previews to visually validate
-        // both behaviors.
+        // Because all the logic lives outside of the SwiftUI
+        // layer, we don't need more that one preview to test
+        // the different view content generation scenarios.
         ContentView(userName: "Ada")
-        ContentView()
     }
 }
