@@ -19,4 +19,12 @@ class GreetingsTests: XCTestCase {
         // concise if you can
         XCTAssertEqual(greetings(userName: "Ada"), "G'day, Ada!")
     }
+
+    func testGreetingsWithEmptyStringSaysGdayMate() {
+        // "A bug is just a test that hasn't been written yet."
+        //
+        // When you discover a bug in your code, start by adding a test that reproduces it.
+        // Fixing the bug then becomes a matter of making the test pass: Red, Green, Refactor.
+        XCTAssertEqual(greetings(userName: ""), "G'day, mate!")
+    }
 }
