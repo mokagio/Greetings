@@ -17,7 +17,7 @@ struct User: Codable, Equatable {
     // We'll make all these changes using the tests as a guide, of course.
 
     func save(in repository: UserRepository = UserDefaults.standard) throws {
-        UserDefaults.standard.set(try JSONEncoder().encode(self), forKey: User.key)
+        try repository.save(self)
     }
 
     static func get() -> User? {
