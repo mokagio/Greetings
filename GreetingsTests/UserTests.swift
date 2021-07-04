@@ -20,16 +20,23 @@ class UserTests: XCTestCase {
         XCTAssertNil(User.get(from: UserRepositoryDouble()))
     }
 
-    func testGetUserWhenThereIsUserReturnsIt() { }
+    func testGetUserWhenThereIsUserReturnsIt() {
+        let user = User(name: "a name")
+        let repository = UserRepositoryDouble(user: user)
+
+        XCTAssertEqual(User.get(from: repository), user)
+    }
 }
 
 class UserRepositoryDouble: UserRepository {
 
     private(set) var storedUser: User?
 
+    init(user: User? = .none) {
+        storedUser = user
+    }
+
     func get() -> User? { storedUser }
 
     func save(_ user: User) throws { storedUser = user }
-
-    func delete() { storedUser = .none }
 }
