@@ -4,8 +4,6 @@ struct User: Codable, Equatable {
 
     let name: String
 
-    private static let key = "user"
-
     // Instead of accessing `UserDefaults` under the hood directly we will:
     //
     // 1. Use the `UserRepository` abstraction to decouple this object from the `UserDefaults`
