@@ -21,6 +21,6 @@ struct User: Codable, Equatable {
     }
 
     static func get(from repository: UserRepository = UserDefaults.standard) -> User? {
-        .none
+        repository.get()
     }
 }
