@@ -2,13 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    // With `private(set) var` + default value, the compiler will
-    // generated an init but we'll also be able to call `.init()`
-    // with no arguments, meaning there's less code to change.
-    // This is useful for faster feedback, but you might want to
-    // remove the default value unless it makes sense to have one
-    // after you're done iterating on the implementation.
-    private(set) var userName: String? = .none
+    let viewModel: ViewModel
 
     var body: some View {
         // Because all the presentation content logic lives outside
@@ -16,16 +10,33 @@ struct ContentView: View {
         // using the faster testing workflow without having to
         // rely on Previews and our eyes to tell us if the behavior
         // has been updated correctly.
-        Text(greetings(userName: userName))
+        Text(viewModel.greetings)
             .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+
+    // The Test Double idea is useful in the context of feeding
+    // real world data to a Preview, too.
+    struct UserRepositoryStub: UserRepository {
+
+        private let user: User?
+
+        init(returning user: User?) {
+            self.user = user
+        }
+
+        func get() -> User? { user }
+
+        func save(_ user: User) throws { fatalError() }
+    }
+
+    static let userRepository = UserRepositoryStub(
+        returning: User(name: "Ada")
+    )
+
     static var previews: some View {
-        // Because all the logic lives outside of the SwiftUI
-        // layer, we don't need more that one preview to test
-        // the different view content generation scenarios.
-        ContentView(userName: "Ada")
+        ContentView(viewModel: .init(userRepository: userRepository))
     }
 }

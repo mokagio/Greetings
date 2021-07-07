@@ -5,7 +5,7 @@ struct GreetingsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(userName: User.get()?.name)
+            ContentView(viewModel: .init(userRepository: UserDefaults.standard))
         }
     }
 }
